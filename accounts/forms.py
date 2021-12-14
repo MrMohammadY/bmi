@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model, authenticate
+from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
 from django.db.models import Q
 
@@ -23,6 +24,8 @@ class RegistrationForm(forms.ModelForm):
         }
 
     def clean_confirm_password(self):
+        validate_password(self.cleaned_data['password'])
+
         if self.cleaned_data['password'] != self.cleaned_data['confirm_password']:
             raise ValidationError('passwords not equal!')
         return self.cleaned_data['confirm_password']
