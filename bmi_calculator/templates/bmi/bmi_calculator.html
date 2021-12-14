@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="calculate" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px">
+    </form>
+    <div class="text-center" style="margin-top: 50px; margin-bottom: 340px">
+        {% if bmi %}
+            {% if bmi <= 18.5 %}
+                <h5>Your Body Mask Index is: {{ bmi }}</h5>
+                <h6>Your status is: <b style="color: coral"> Light weight </b></h6>
+            {% elif bmi > 18.5 and bmi <= 24.9 %}
+                <h5>Your Body Mask Index is: {{ bmi }}</h5>
+                <h6>Your status is: <b style="color: green"> Normal weight </b></h6>
+            {% elif bmi > 24.9 and bmi <= 29.9 %}
+                <h5>Your Body Mask Index is: {{ bmi }}</h5>
+                <h6>Your status is: <b style="color: orange"> Over weight </b></h6>
+            {% elif bmi > 29.9 and bmi <= 34.9 %}
+                <h5>Your Body Mask Index is: {{ bmi }}</h5>
+                <h6>Your status is: <b style="color: orangered"> Fat </b></h6>
+            {% elif bmi > 34.9 and bmi <= 39.9 %}
+                <h5>Your Body Mask Index is: {{ bmi }}</h5>
+                <h6>Your status is: <b style="color: darkred"> Obesity - Type 1 </b></h6>
+            {% elif bmi > 39.9 %}
+                <h5>Your Body Mask Index is: {{ bmi }}</h5>
+                <h6>Your status is: <b style="color: red"> Obesity - Type 2 </b></h6>
+            {% else %}
+                <h6>Your input incorrect</h6>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}
