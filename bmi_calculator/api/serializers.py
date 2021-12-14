@@ -5,7 +5,7 @@ from rest_framework.exceptions import ValidationError
 
 class BMICalculatorSerializer(serializers.Serializer):
     weight = serializers.FloatField(write_only=True, min_value=1)
-    height = serializers.IntegerField(write_only=True)
+    height = serializers.IntegerField(write_only=True,  min_value=1)
     bmi = serializers.FloatField(read_only=True)
     message = serializers.CharField(read_only=True)
 
