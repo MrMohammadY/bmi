@@ -1,4 +1,3 @@
-from django.contrib.gis.measure import Distance
 from rest_framework import status
 from rest_framework.generics import GenericAPIView
 from rest_framework.permissions import IsAuthenticated
