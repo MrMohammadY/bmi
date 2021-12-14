@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block title %}Profile{% endblock %}
 {% block content %}
+    <div style="margin-bottom: 400px">
     <h3><b>Profile</b></h3>
     <h5><b>username:</b> {{ request.user.username }}</h5>
     <h5><b>email:</b> {{ request.user.email }}</h5>
     <h5><b>first name:</b> {{ request.user.first_name }}</h5>
     <h5><b>last name:</b> {{ request.user.last_name }}</h5>
+    </div>
 {% endblock %}

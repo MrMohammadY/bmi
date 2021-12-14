@@ -2,10 +2,13 @@
 {% block title %}Registration{% endblock %}
 
 {% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
+    <div style="margin-bottom: 140px">
 
-        <input type="submit" value="register" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px">
-    </form>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="register" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px">
+        </form>
+        <p>have account?<a href="{% url 'accounts:login' %}">Login</a></p>
+    </div>
 {% endblock %}
