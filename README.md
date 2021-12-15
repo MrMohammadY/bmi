@@ -73,6 +73,9 @@ install package with:
 <p style="font-size: 16px"><b>In this step you should create database in postgresql(don't change create database in other rdbms!)</b></p>
 <p style="font-size: 16px"><b>User which connect to database should Superuser</b></p>
 
+    CREATE DATABASE <your database name>;
+    CREATE ROLE <your username> LOGIN SUPERUSER PASSWORD '<your password>';
+    GRANT ALL PRIVILEGES ON DATABASE <your database name> to <your username>;
 
 ---
 
