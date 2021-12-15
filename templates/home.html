@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <div style="margin-bottom: 50px">
+        <h2><b>What is BMI:</b></h2>
+        <p>Body mass index (BMI) is a person’s weight in kilograms divided by the square of height in meters. BMI is an
+            inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and
+            obesity.
+            BMI does not measure body fat directly, but BMI is moderately correlated with more direct measures of body
+            fat
+            1,2,3. Furthermore, BMI appears to be as strongly correlated with various metabolic and disease outcome as
+            are
+            these more direct measures of body fatness. <a href="{% url 'bmi:bmi-calculator' %}">calculate your bmi</a></p>
+    </div>
+    <div style="margin-bottom: 50px">
+        <h2><b>How is BMI used?</b></h2>
+        <p>BMI can be a screening tool, but it does not diagnose the body fatness or health of an individual. To
+            determine if BMI is a health risk, a healthcare provider performs further assessments. Such assessments
+            include skinfold thickness measurements, evaluations of diet, physical activity, and family
+            history.<br>
+    </div>
+    <div>
+        <h2><b>How is BMI interpreted for adults?</b></h2>
+        <p>For adults 20 years old and older, BMI is interpreted using standard weight status categories. These
+            categories
+            are the same for men and women of all body types and ages.</p>
+        <div>
+            <div class="table-responsive">
+                <table id="table5" class="table table-bordered ">
+                    <caption class="sr-only">The standard weight status categories associated with BMI ranges for adults
+                        are
+                        shown in the following table.
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">BMI</th>
+                        <th scope="col">Weight Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Below 18.5</td>
+                        <td>Underweight</td>
+                    </tr>
+                    <tr>
+                        <td>18.5 &ndash; 24.9</td>
+                        <td>Healthy Weight</td>
+                    </tr>
+                    <tr>
+                        <td>25.0 &ndash; 29.9</td>
+                        <td>Overweight</td>
+                    </tr>
+                    <tr>
+                        <td>30.0 and Above</td>
+                        <td>Obesity</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
