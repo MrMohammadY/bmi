@@ -70,7 +70,9 @@ install package with:
 
 ### Fourth step
 
-**In this step you should create database in postgresql(don't change create database in other rdbms!)**
+<p style="font-size: 16px"><b>In this step you should create database in postgresql(don't change create database in other rdbms!)</b></p>
+<p style="font-size: 16px"><b>User which connect to database should Superuser</b></p>
+
 
 ---
 
