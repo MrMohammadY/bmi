@@ -22,6 +22,9 @@ class RegistrationForm(forms.ModelForm):
             'username': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'google@gmail.com'}),
         }
+        help_texts = {
+            'username': None,
+        }
 
     def clean_confirm_password(self):
         validate_password(self.cleaned_data['password'])
